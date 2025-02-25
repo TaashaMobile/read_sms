@@ -1,4 +1,4 @@
-name: flutter_read_sms
+name: flutter_read_inbox
 description: A Flutter package which helps to fetch the sms list from the users mobile.
 version: 0.0.1
 homepage: https://github.com/TaashaMobile/read_sms 

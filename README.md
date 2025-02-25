@@ -27,7 +27,7 @@ To use this package, add the following dependency to your `pubspec.yaml` file:
 
 ```yaml
 dependencies:
-  read_sms: ^0.0.1
+  flutter_read_inbox: ^0.0.1
 ```
 
 Then, run:  
@@ -54,16 +54,16 @@ To start using this package, you must **add the required permissions** in your A
 Import the package:  
 
 ```dart
-import 'package:read_sms/read_sms.dart';
+import 'package:read_sms/src/read_inbox.dart';
 ```
 
 ### Request Permissions and Fetch SMS  
 
 ```dart
-final ReadMyName myLibrary = ReadMyName();
+final ReadInbox readInbox = ReadInbox();
 
 // Request necessary permissions
-myLibrary.requestPermissions();
+readInbox.readInboxData();
 ```
 
 ## Example  
@@ -72,7 +72,7 @@ For a complete example, check the `/example` folder.
 
 ## Additional Information  
 
-- **Issues & Contributions:** If you find any issues or want to contribute, visit the [GitHub repository](https://github.com/your-repo-link).  
-- **Support:** If you need help, open an issue or reach out via [email](mailto:your-email@example.com).  
+- **Issues & Contributions:** If you find any issues or want to contribute, visit the [GitHub repository](https://github.com/TaashaMobile/read_sms).  
+- **Support:** If you need help, open an issue or reach out via [email](mailto:ketan.taasha@gmail.com).  
 
 🚀 **Enjoy seamless SMS integration in your Flutter project!** 🚀  

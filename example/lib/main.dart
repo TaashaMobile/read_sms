@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:read_sms/src/read_data.dart';
+import 'package:flutter_read_inbox/src/read_inbox.dart';
 
 void main() {
   runApp(MyApp());
@@ -11,7 +11,7 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
-  final ReadMyName myLibrary = ReadMyName();
+  final ReadInbox readInbox = ReadInbox();
 
   @override
   Widget build(BuildContext context) {
@@ -19,7 +19,8 @@ class _MyAppState extends State<MyApp> {
       home: Scaffold(
         appBar: AppBar(title: Text('SMS Messages')),
         body: FutureBuilder<List<Map<String, dynamic>>>(
-          future: myLibrary.requestPermissions(),
+          future: readInbox.readInboxData(
+              url: "https://jsonplaceholder.typicode.com/posts"),
           builder: (context, snapshot) {
             if (snapshot.connectionState == ConnectionState.waiting) {
               return Center(child: CircularProgressIndicator());
