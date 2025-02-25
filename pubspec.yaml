@@ -1,7 +1,14 @@
-name: read_sms
-description: "A new Flutter package project."
+name: flutter_read_sms
+description: A Flutter package which helps to fetch the sms list from the users mobile.
 version: 0.0.1
-homepage:
+homepage: https://github.com/TaashaMobile/read_sms 
+repository: https://github.com/TaashaMobile/read_sms
+issue_tracker: https://github.com/TaashaMobile/read_sms/issues
+documentation: https://github.com/TaashaMobile/read_sms/wiki
+topics:
+  - flutter
+  - package
+  - read sms
 
 environment:
   sdk: ^3.6.0

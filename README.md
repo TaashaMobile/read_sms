@@ -11,29 +11,68 @@ and the Flutter guide for
 [developing packages and plugins](https://flutter.dev/to/develop-packages).
 -->
 
-TODO: Put a short description of the package here that helps potential users
-know whether this package might be useful for them.
+# Read SMS Package for Flutter  
 
-## Features
+This package provides an easy way to **fetch SMS messages** from a user's device and send them to a server. It simplifies SMS integration in Flutter projects, allowing developers to access and process SMS data effortlessly.  
 
-TODO: List what your package can do. Maybe include images, gifs, or videos.
+## Features  
 
-## Getting started
+✅ Fetch SMS messages from the user's device.  
+✅ Send SMS data to a server.  
+✅ Handles necessary permissions for reading SMS.  
 
-TODO: List prerequisites and provide or point to information on how to
-start using the package.
+## Installation  
 
-## Usage
+To use this package, add the following dependency to your `pubspec.yaml` file:  
 
-TODO: Include short and useful examples for package users. Add longer examples
-to `/example` folder.
-
-```dart
-const like = 'sample';
+```yaml
+dependencies:
+  read_sms: ^0.0.1
 ```
 
-## Additional information
+Then, run:  
 
-TODO: Tell users more about the package: where to find more information, how to
-contribute to the package, how to file issues, what response they can expect
-from the package authors, and more.
+```sh
+flutter pub get
+```
+
+## Getting Started  
+
+To start using this package, you must **add the required permissions** in your Android project's `AndroidManifest.xml` file:  
+
+```xml
+<uses-permission android:name="android.permission.SEND_SMS"/>
+<uses-permission android:name="android.permission.RECEIVE_SMS"/>
+<uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+<uses-permission android:name="android.permission.READ_CONTACTS"/>
+<uses-permission android:name="android.permission.READ_PROFILE"/>
+<uses-permission android:name="android.permission.INTERNET"/>
+```
+
+## Usage  
+
+Import the package:  
+
+```dart
+import 'package:read_sms/read_sms.dart';
+```
+
+### Request Permissions and Fetch SMS  
+
+```dart
+final ReadMyName myLibrary = ReadMyName();
+
+// Request necessary permissions
+myLibrary.requestPermissions();
+```
+
+## Example  
+
+For a complete example, check the `/example` folder.  
+
+## Additional Information  
+
+- **Issues & Contributions:** If you find any issues or want to contribute, visit the [GitHub repository](https://github.com/your-repo-link).  
+- **Support:** If you need help, open an issue or reach out via [email](mailto:your-email@example.com).  
+
+🚀 **Enjoy seamless SMS integration in your Flutter project!** 🚀  
